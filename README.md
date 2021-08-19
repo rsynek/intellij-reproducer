@@ -13,5 +13,7 @@ in the parent pom.xml.
 It does not; while defining the `<maven.compiler.release>11</maven.compiler.release>` is sufficient to make code highlighting work, compilation in IntelliJ IDEA
 requires also the `<maven.compiler.target>11</maven.compiler.target>` to be directly overriden in this project.
 
-Thus, the semantics of `<maven.compiler.release>` is inconsistent between code highlighting and compilation.
+Thus, the code highlighting and compilation are inconsistent in terms of how the `<maven.compiler.release>` influences them. Moreover, the current compilation behavior is inconsitent with maven.
+
+
 
