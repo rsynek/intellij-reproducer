@@ -6,7 +6,6 @@ A maven project that inherits from `org.jboss:jboss-parent` pom.xml uses the `va
 Despite the fact that maven invoked via a terminal successfully compiles the project, IntelliJ IDEA (Project context menu -> Rebuild...) 
 fails to compile the project due to the unknown keyword `var`.
 
-The issue seems to be caused by the following configuration details:
 The `jboss-parent` pom.xml defines a property `<maven.compiler.target>1.8</maven.compiler.target>`, 
 while this project defines `<maven.compiler.release>11</maven.compiler.release>`, which should effectively override the `<maven.compiler.target>` defined
 in the parent pom.xml.
